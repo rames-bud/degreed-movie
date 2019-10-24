@@ -1,0 +1,41 @@
+<div class="row my-2">
+  <div class="col">
+    <p class="lead ">Movie List</p>
+  </div>
+  <div class="col">
+    <div class="btn-group float-right" role="group" aria-label="Years">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [ngClass]="{
+          'btn-primary': currentYear === 0
+        }"
+        (click)="yearChanged(0)"
+      >
+        All
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [ngClass]="{
+          'btn-primary': currentYear === 2000
+        }"
+        (click)="yearChanged(2000)"
+      >
+        2000's
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        [ngClass]="{
+          'btn-primary': currentYear === 2010
+        }"
+        (click)="yearChanged(2010)"
+      >
+        2010's
+      </button>
+    </div>
+  </div>
+</div>
+
+<movie-list [movies]="movieList"></movie-list>

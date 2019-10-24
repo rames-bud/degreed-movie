@@ -1,0 +1,24 @@
+<div class="media">
+  <img
+    class="mr-3 rounded "
+    [src]="'assets/images/' + index + '.jpg'"
+    [alt]="movieDetails?.Title"
+  />
+  <div class="media-body">
+    <h5 class="mt-0">{{ movieDetails?.Title }}</h5>
+    <div>
+      <span class="col-2 border rounded py-1">{{ movieDetails?.Rated }}</span>
+      <span class="col-2"> {{ movieDetails?.Runtime }}</span>
+      <span class="col-8 float-right text-right">{{
+        movieDetails?.Released
+      }}</span>
+    </div>
+    <p class="my-2">{{ movieDetails?.Plot }}</p>
+    <a
+      class="btn"
+      target="_blank"
+      [href]="'https://www.imdb.com/title/' + movieId"
+      >View on IMDB</a
+    >
+  </div>
+</div>
